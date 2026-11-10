@@ -39,7 +39,7 @@ jobs:
                   toolchain: 1.92.0
             - name: Ensure C toolchain for Rust builds
               run: ./scripts/ci/ensure_cc.sh
-            - uses: Swatinem/rust-cache@779680da715d629ac1d338a641029a2f4372abb5 # v3
+            - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v3
             - name: Runner preflight (compiler + disk)
               shell: bash
               run: |
