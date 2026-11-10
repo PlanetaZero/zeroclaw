@@ -265,7 +265,7 @@ jobs:
                   toolchain: 1.92.0
                   targets: ${{ matrix.target }}
 
-            - uses: Swatinem/rust-cache@779680da715d629ac1d338a641029a2f4372abb5 # v3
+            - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v3
               if: runner.os != 'Windows'
 
             - name: Install cross for cross-built targets
@@ -558,7 +558,7 @@ jobs:
                   cat artifacts/release-manifest.md >> "$GITHUB_STEP_SUMMARY"
 
             - name: Install cosign
-              uses: sigstore/cosign-installer@faadad0cce49287aee09b3a48701e75088a2c6ad # v4.0.0
+              uses: sigstore/cosign-installer@756fe2d284c7292c4e9b62c8a28f1e5629c59532 # v4.1.3
 
             - name: Sign artifacts with cosign (keyless)
               shell: bash
